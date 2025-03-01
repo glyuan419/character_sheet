@@ -551,6 +551,20 @@ $(document).ready(function(){
             dice_board.innerHTML += ': ' + roll_dice(button.innerText);
             dice_board.scroll({top: dice_board.scrollHeight, left: 0, behavior: "smooth"});
         });
+        Object.defineProperty(button, 'innerText', {
+            set(value) {
+                if (typeof value === 'number') {
+                    this._innerText = value >= 0 ? `+${value}` : value.toString();
+                } else {
+                    this._innerText = value;
+                }
+                this.textContent = this._innerText;
+            },
+            get() {
+                return this._innerText;
+            }
+        });
+        
     });
 
     // 绑定骰盘
