@@ -248,64 +248,101 @@ function compute() {
     charisma_saving.innerText = parseInt(Number(charisma_score.value)/2)-5
                               + charisma_proficiency.selectedIndex*Number(proficiency_bonus.innerText);
 
-    // 技能 = 属性调整值 + 可能的熟练加值 + 其它
+    // 技能 = 属性调整值 + 可能的熟练加值 + 吟游诗人万事通 + 其它
     athletics_score.innerText = Number(strength_modifier.innerText)
                            + athletics_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && athletics_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(athletics_mics.value);
     acrobatics_score.innerText = Number(dexterity_modifier.innerText)
                            + acrobatics_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && acrobatics_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(acrobatics_mics.value);
     sleight_of_hand_score.innerText = Number(dexterity_modifier.innerText)
                            + sleight_of_hand_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && sleight_of_hand_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(sleight_of_hand_mics.value);
     stealth_score.innerText = Number(dexterity_modifier.innerText)
                            + stealth_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && stealth_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(stealth_mics.value);
     investigation_score.innerText = Number(intelligence_modifier.innerText)
                            + investigation_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && investigation_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(investigation_mics.value);
     arcana_score.innerText = Number(intelligence_modifier.innerText)
                            + arcana_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && arcana_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(arcana_mics.value);
     history_score.innerText = Number(intelligence_modifier.innerText)
                            + history_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && history_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(history_mics.value);
     nature_score.innerText = Number(intelligence_modifier.innerText)
                            + nature_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && nature_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(nature_mics.value);
     religion_score.innerText = Number(intelligence_modifier.innerText)
                            + religion_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && religion_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(religion_mics.value);
     perception_score.innerText = Number(wisdom_modifier.innerText)
                            + perception_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && perception_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(perception_mics.value);
     insight_score.innerText = Number(wisdom_modifier.innerText)
                            + insight_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && insight_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(insight_mics.value);
     animal_handling_score.innerText = Number(wisdom_modifier.innerText)
                            + animal_handling_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && animal_handling_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(animal_handling_mics.value);
     medicine_score.innerText = Number(wisdom_modifier.innerText)
                            + medicine_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && medicine_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(medicine_mics.value);
     survival_score.innerText = Number(wisdom_modifier.innerText)
                            + survival_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && survival_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(survival_mics.value);
     persuasion_score.innerText = Number(charisma_modifier.innerText)
                            + persuasion_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && persuasion_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(persuasion_mics.value);
     deception_score.innerText = Number(charisma_modifier.innerText)
                            + deception_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && deception_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(deception_mics.value);
     intimidation_score.innerText = Number(charisma_modifier.innerText)
                            + intimidation_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && intimidation_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(intimidation_mics.value);
     performance_score.innerText = Number(charisma_modifier.innerText)
                            + performance_proficiency.selectedIndex*Number(proficiency_bonus.innerText)
+                           + Number((class_name.selectedIndex==3 && performance_proficiency.selectedIndex==0)?
+                                 (parseInt(Number(proficiency_bonus.innerText)/2)):(0))
                            + Number(performance_mics.value);
 
-    // 先攻 = 敏捷调整值 + 其它
-    initiative_score.innerText = Number(dexterity_modifier.innerText) + Number(initiative_bonus.value);
+    // 先攻 = 敏捷调整值 + 其它 + 吟游诗人万事通
+    initiative_score.innerText = Number(dexterity_modifier.innerText) + Number(initiative_bonus.value)
+                               + Number((class_name.selectedIndex==3)?(parseInt(Number(proficiency_bonus.innerText)/2)):(0));
     // DC
     ability_list = ['strength', 'dexterity', 'intelligence', 'wisdom', 'charisma'];
     difficulty_class.value = 8 + Number(proficiency_bonus.innerText)
